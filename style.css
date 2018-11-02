@@ -1,0 +1,130 @@
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+* {
+	font-family: arial Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+ul {
+	list-style: none;
+}
+
+body, ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	box-sizing: border-box;
+}
+
+html {
+	background-color: white;
+}
+
+header, nav, main {
+	display: block;
+}
+
+header {
+	background-color: black;
+}
+
+header nav p {
+	text-decoration: none;
+	color: white;
+	padding: 0px 10px;
+}
+
+header li {
+	display: inline-block;
+	background-color: black;
+}
+
+header nav a {	
+	display: block;
+	line-height: 50px;
+	padding: 0px 30px;
+}
+header nav a:hover {
+	color: black;
+	background-color: #eee;
+	text-decoration: none;
+}
+footer {
+	width: 100%;
+	background-color: black;
+	color: white;
+	text-align: center;	
+	padding: 5px 0px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.jumbotron {
+	width: 100%;
+	background-color: #eee;
+	color: black;
+	text-align: center;
+	padding: 5px 0px;
+
+}
+
+.container {
+	width: 100%;
+	background-color: white;
+	color: black;
+	text-align: left;
+	margin: 0px 10px;
+	padding: 5px 10px;	
+}
+
+/* Dropdown */
+
+header nav ul {
+	position: relative; /* Als de positie relative is, worden alle absoluten die in dit element vallen aan het 0-punt van dit element gekoppeld */
+}
+header nav ul ul {
+	position: absolute; /* Omdat deze in een relatieve zit, is zijn 0-punt niet meer gekoppeld aan de body, maar aan het element waar hij in zit */
+	top: 50px; /* De waarde is de hoogte van mijn line height van het nav a element */
+	display: none; /* Nu word het element verborgen */
+}
+header nav ul li:hover > ul {
+	display: inherit; /* Als het ouder element block is wordt deze dat nu ook en word dus zichtbaar */
+	text-decoration: none;
+	color: black;
+	background-color: #eee;	
+}
+header nav ul ul li {
+	display: list-item;
+	width: 150px;
+}
+/* Alle 2e, 3e en diepere list items */
+header nav ul ul ul li {
+	position: relative;
+	top: -60px;
+	left: 150px;
+}
+header nav li > a:after {
+	content: ' +';
+}
+header nav li > a:only-child:after {
+	content: '';
+}
+ol li {
+	border: 2px dotted black;
+	margin: 10px 100px;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: #eee;	
+	list-style-type: none;
+}
+.submit {
+    margin: 10px 100px;
+    background-color: #eee;
+    border: 2px dotted #333;
+    padding: 10px;     
+
+}
+.text {
+	padding: 0px 10px;
+}
